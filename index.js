@@ -14,10 +14,10 @@ app.intent('peticion', (conv, {opcionElegida}) => {
     conv.ask(`Ahí va un ${opcionElegida}:`);
     switch(opcionElegida){
           case 'refran':
-                conv.ask('Nunca es tarde si la dicha es buena. ¿Te gustaría escuchar otro chiste o refrán?');
+                conv.close('Nunca es tarde si la dicha es buena.');
           break;
           case 'chiste':
-                conv.ask('¿Qué hace una persona con un sobre de ketchup en la oreja? ¡Escuchar salsa! jaja ¿Te gustaría escuchar otro chiste o refrán?');
+                conv.close('¿Qué hace una persona con un sobre de ketchup en la oreja? ¡Escuchar salsa! jaja');
           break;
           default:
                conv.close('Pues ahora mismo no se me ocurre ninguno, pero  pensaré en ello');
